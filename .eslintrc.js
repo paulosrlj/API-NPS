@@ -18,6 +18,8 @@ module.exports = {
     'prettier/prettier': 'error',
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
+    "import/prefer-default-export": 0,
+    'class-methods-use-this': 0,
 
     'import/extensions': [
       'error',
