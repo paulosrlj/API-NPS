@@ -23,7 +23,7 @@ class User {
   created_at: Date;
 
   @UpdateDateColumn()
-  updated_date: Date;
+  updated_at: Date;
 
   constructor() {
     if (!this.id) {
