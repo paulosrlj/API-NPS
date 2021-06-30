@@ -20,7 +20,7 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': ['error'],
     "import/prefer-default-export": 0,
     'class-methods-use-this': 0,
-
+    'camelcase': 0,
     'import/extensions': [
       'error',
       'ignorePackages',
