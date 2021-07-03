@@ -1,4 +1,4 @@
-import { Request, Response } from 'express';
+import { json, Request, Response } from 'express';
 import { getCustomRepository } from 'typeorm';
 
 import SurveysRepository from '../repositories/SurveysRepository';
@@ -16,6 +16,13 @@ class SurveyController {
 
     await surveysRepository.save(survey);
     return res.status(200).json(survey);
+  }
+
+  async show(req: Request, res: Response): Promise<Response> {
+    const surveysRepository = getCustomRepository(SurveysRepository);
+    const allSurveys = await surveysRepository.find();
+
+    return res.status(200).json(allSurveys);
   }
 }
 
