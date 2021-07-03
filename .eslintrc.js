@@ -28,6 +28,7 @@ module.exports = {
         ts: 'never',
       },
     ],
+    'no-console': process.env.NODE_ENV === 'production' ? 1 : 0
   },
   settings: {
     'import/resolver': {
