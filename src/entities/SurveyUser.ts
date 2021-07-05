@@ -22,14 +22,14 @@ class SurveyUser {
 
   @ManyToOne(() => User)
   @JoinColumn({ name: 'user_id' })
-  survey: Survey;
+  survey: User;
 
   @Column()
   survey_id: string;
 
   @ManyToOne(() => Survey)
-  @JoinColumn({ name: 'user_id' })
-  user: User;
+  @JoinColumn({ name: 'survey_id' })
+  user: Survey;
 
   @Column()
   value: number;
